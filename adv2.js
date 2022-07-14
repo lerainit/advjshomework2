@@ -33,9 +33,6 @@ const books = [
   ];
 
 
-
-
-
 class noListItemError extends Error{
 constructor(errorKey){
   super();
@@ -62,18 +59,13 @@ if(!name ){
     this.name = name;
     this.author = author;
     this.price = price;
+    this.ul = document.createElement('ul')  
 
-
-  this.ul = document.createElement('ul')  
-
-
-  }
-  
+}
   
   render(){
   const root = document.querySelector('.root')
   root.append(this.ul)
-
 
 this.ul.insertAdjacentHTML('beforeend',`<li>${this.name}</li><li>${this.author}</li><li>${this.price}</li>`)
 
